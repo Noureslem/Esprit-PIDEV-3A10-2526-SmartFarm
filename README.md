@@ -16,7 +16,7 @@
 </p>
 
 <p align="center">
-  Application JavaFX moderne combinant gestion d'opérations agricoles, système d'irrigation intelligent, 
+  Application Symfony moderne combinant gestion d'opérations agricoles, système d'irrigation intelligent, 
   détection de maladies des plantes, rotation optimisée des cultures et chatbot IA propulsé par Google Gemini.
 </p>
 
