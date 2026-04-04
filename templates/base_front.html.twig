@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>{% block title %}FlahaSmart - L'Excellence Agricole{% endblock %}</title>
+        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>🛒</text></svg>">
+        
+        <!-- Google Fonts -->
+        <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+        <!-- Bootstrap 5 CSS -->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <!-- FontAwesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        
+        {% block stylesheets %}
+            <style>
+                :root {
+                    --flaha-green: #ffffffff;
+                    --flaha-dark: #0f5132;
+                    --flaha-light: #e8f5e9;
+                    --text-body: #4a5568;
+                }
+                body {
+                    font-family: 'Inter', sans-serif;
+                    background-color: #f7fafc;
+                    color: var(--text-body);
+                    min-height: 100vh;
+                    display: flex;
+                    flex-direction: column;
+                    
+                }
+                h1, h2, h3, h4, h5, h6, .navbar-brand {
+                    font-family: 'Outfit', sans-serif;
+                }
+                 .navbar-flahasmart {
+                    background-color: #247c3b; /* Vert classique FlahaSmart  */
+                }
+                  .navbar-flahasmart .nav-link {
+                    color: rgba(255, 255, 255, 0.85);
+                    margin-left: 15px;
+                }
+                .navbar-flahasmart .nav-link:hover {
+                    color: white;
+                }
+              
+                .navbar-flahasmart .navbar-brand {
+                    color: white;
+                    font-weight: bold;
+                    font-size: 1.5rem;
+                }
+                .btn-premium:hover {
+                    transform: translateY(-2px);
+                    box-shadow: 0 8px 25px rgba(25, 135, 84, 0.4);
+                    color: white;
+                }
+
+                .main-content {
+                    flex: 1;
+                }
+                
+                /* Style pour la fiche produit (show) */
+                .beautiful-card {
+                    background: white;
+                    border-radius: 28px;
+                    padding: 2rem;
+                    box-shadow: 0 20px 35px -12px rgba(0, 0, 0, 0.08);
+                    transition: transform 0.2s ease, box-shadow 0.2s ease;
+                    border: 1px solid #e9ecef;
+                }
+                .beautiful-card:hover {
+                    box-shadow: 0 25px 40px -14px rgba(25, 135, 84, 0.2);
+                }
+
+                /* Footer */
+                .premium-footer {
+                    background: white;
+                    border-top: 1px solid #edf2f7;
+                    padding: 3rem 0;
+                    margin-top: auto;
+                    text-align: center;
+                }
+            </style>
+        {% endblock %}
+    </head>
+    <body>
+
+    <nav class="navbar navbar-expand-lg navbar-flahasmart px-4">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"><i class="fa-solid fa-seedling me-2"></i>FlahaSmart</a>
+                <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#topNav">
+                    <span class="fa fa-bars text-white"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="topNav">
+                    <ul class="navbar-nav"><li class="nav-item"><a class="nav-link" href="{{ path('client_produit_index') }}">Nos Produits</a></li>
+
+  </ul>
+                </div>
+            </div>
+        </nav>
+       
+        
+        <main class="main-content container py-4">
+            {% block body %}{% endblock %}
+        </main>
+        
+        <footer class="premium-footer">
+            <div class="container">
+                <p class="text-muted fw-bold mb-1">&copy; 2026 FlahaSmart - L'Excellence Agricole Tunisienne.</p>
+                <small class="text-muted">Des produits frais, de la terre à votre table.</small>
+            </div>
+        </footer>
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>
